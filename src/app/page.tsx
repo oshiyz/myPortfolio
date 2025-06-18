@@ -38,16 +38,29 @@ const competitions = [
 export default function Home() {
   return (
     <main className="main-container">
-      {/* Hero Section */}
-      <div className="card" style={{ textAlign: 'center', marginTop: 32 }}>
-        <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: 8 }}>
-          Hi, I'm <span style={{ color: '#3b82f6' }}>Oshadha</span>
-        </h1>
-        <p style={{ fontSize: '1.3rem', color: '#cbd5e1', marginBottom: 24 }}>
-          I transform complex ideas into elegant, scalable solutions that drive business success.
-        </p>
-        <button className="button">Download CV</button>
-        <button className="button">View Projects</button>
+      {/* Video Hero Section */}
+      <div className="hero-container">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="hero-video"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-content">
+          <h1 style={{ fontSize: '3.2rem', fontWeight: 800, marginBottom: 16, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+            Hi, I'm <span style={{ color: '#3b82f6' }}>Oshadha</span>
+          </h1>
+          <p style={{ fontSize: '1.5rem', color: '#fff', marginBottom: 32, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+            I transform complex ideas into elegant, scalable solutions that drive business success.
+          </p>
+          <div className="hero-buttons">
+            <button className="button">Download CV</button>
+            <button className="button">View Projects</button>
+          </div>
+        </div>
       </div>
 
       {/* About/Intro Card */}
@@ -140,7 +153,7 @@ export default function Home() {
           I'm always open to discussing new projects, collaborations, or just having a chat!
         </p>
         <a href="mailto:oshadhadahanayaka0504@gmail.com" className="button">Email</a>
-        <a href="https://github.com/oshiyc" className="button" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/oshiyz" className="button" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/oshadha-dahanayaka-47310b2b4/" className="button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
 
@@ -165,7 +178,7 @@ export default function Home() {
           <a href="mailto:oshadhadahanayaka0504@gmail.com" title="Email" target="_blank" rel="noopener noreferrer">
             <span role="img" aria-label="email">✉️</span>
           </a>
-          <a href="https://github.com/oshiyc" title="GitHub" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/oshiyz" title="GitHub" target="_blank" rel="noopener noreferrer">
             <span role="img" aria-label="github">🐙</span>
           </a>
           <a href="https://www.linkedin.com/in/oshadha-dahanayaka-47310b2b4/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
