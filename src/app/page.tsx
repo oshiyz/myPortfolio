@@ -4,25 +4,63 @@ import Image from 'next/image';
 
 const stats = [
   { label: 'Years Experience', value: '3+' },
-  { label: 'Projects', value: '10+' },
-  { label: 'Technologies', value: '7+' },
+  { label: 'Projects', value: '5+' },
+  { label: 'Technologies', value: '10+' },
 ];
 
 const timeline = [
-  { title: 'Started BSc Journey', desc: 'BSc in IT at University', year: '2021' },
-  { title: 'Completed Internship', desc: 'Intern at Tech Company', year: '2022' },
-  { title: 'Digital Marketing', desc: 'Freelance Digital Marketer', year: '2022' },
+  { title: 'Started BSc Journey', desc: 'BSc in IT at SLIIT', year: '2022' },
   { title: 'Web Development', desc: 'Built multiple web apps', year: '2023' },
-  { title: 'Graduated', desc: 'BSc in IT', year: '2024' },
+  { title: 'SLIIT Internship', desc: 'Intern at Scienter Technologies (7 months)', year: '2024' },
+  { title: 'Graduating', desc: 'BSc in IT', year: '2026' },
 ];
 
 const projects = [
-  { title: 'Learn OAR', desc: 'Full-stack LMS with SpringBoot, React, MongoDB.', tags: ['SpringBoot', 'React', 'MongoDB'], type: 'Personal' },
-  { title: 'Discover Galle', desc: 'Tourism web app with Angular, .NET, MSSQL.', tags: ['Angular', '.NET', 'MSSQL'], type: 'Personal' },
-  { title: 'Portfolio', desc: 'Personal portfolio site.', tags: ['Next.js', 'CSS'], type: 'Personal' },
-  { title: 'BrandSite', desc: 'Brand showcase site.', tags: ['React', 'Styled'], type: 'Freelance' },
-  { title: 'ShopX', desc: 'E-commerce platform.', tags: ['Vue', 'Node'], type: 'Freelance' },
-  { title: 'Uni Project', desc: 'University group project.', tags: ['Java', 'MySQL'], type: 'University' },
+  // University Projects
+  { 
+    title: 'Learn OAR', 
+    desc: 'Full-stack Learning Management System with SpringBoot, React, MongoDB. Features include user authentication, course management, and progress tracking.', 
+    tags: ['SpringBoot', 'React', 'MongoDB', 'JWT', 'REST API'], 
+    type: 'University',
+    github: 'https://github.com/oshiyz/learn-ora',
+    demo: '#'
+  },
+  { 
+    title: 'Discover Galle', 
+    desc: 'Tourism web application built with Angular frontend and .NET backend. Includes location-based services and booking system.', 
+    tags: ['Angular', '.NET', 'MSSQL', 'TypeScript', 'C#'], 
+    type: 'University',
+    github: 'https://github.com/oshiyz/discover-galle',
+    demo: '#'
+  },
+  { 
+    title: 'Student Management System', 
+    desc: 'Comprehensive student management solution with attendance tracking, grade management, and reporting features.', 
+    tags: ['Java', 'MySQL', 'Swing', 'JDBC'], 
+    type: 'University',
+    github: 'https://github.com/oshiyz/student-management',
+    demo: '#'
+  },
+  
+  // Freelancing Projects
+  { 
+    title: 'Dreamn Bride', 
+    desc: 'Wedding planning and bridal services platform with vendor management, booking system, and portfolio showcase.', 
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'], 
+    type: 'Freelance',
+    github: 'https://github.com/oshiyz/dream-bride',
+    demo: 'https://dreamn-bride.com'
+  },
+  
+  // Personal Projects
+  { 
+    title: 'Portfolio Website', 
+    desc: 'Personal portfolio website built with Next.js and modern CSS animations.', 
+    tags: ['Next.js', 'CSS3', 'TypeScript', 'Responsive'], 
+    type: 'Personal',
+    github: 'https://github.com/oshiyz/myPortfolio',
+    demo: '#'
+  },
 ];
 
 const blogPosts = [
@@ -38,6 +76,7 @@ const competitions = [
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [activeFilter, setActiveFilter] = useState('all');
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1500);
@@ -118,19 +157,123 @@ export default function Home() {
         {/* Projects Section */}
         <div className="card" id="projects">
           <h2 className="section-title">Projects</h2>
-          <div className="flex-row" style={{ justifyContent: 'center' }}>
-            <div className="stat-card" style={{ minWidth: 320 }}>
-              <div className="stat-value" style={{ fontSize: '1.3rem', color: '#60a5fa' }}>Learn OAR</div>
-              <div className="stat-label" style={{ color: '#e0e7ef', fontSize: '1.05rem', marginBottom: 12 }}>
-                Full-stack LMS with SpringBoot, React, MongoDB.
-              </div>
-              <div>
-                <span className="chip">SpringBoot</span>
-                <span className="chip">React</span>
-                <span className="chip">MongoDB</span>
-              </div>
-              <a href="#" className="button" style={{ marginTop: 18 }}>View Project</a>
-            </div>
+          <p style={{ color: '#cbd5e1', marginBottom: 24, textAlign: 'center' }}>
+            A collection of my work across university projects, freelancing, and personal development
+          </p>
+          
+          {/* Project Categories */}
+          <div className="flex-row" style={{ justifyContent: 'center', marginBottom: 32, gap: 12 }}>
+            <button 
+              className="button" 
+              style={{ 
+                backgroundColor: '#1e293b', 
+                color: '#60a5fa',
+                border: '1px solid #334155'
+              }}
+              onClick={() => setActiveFilter('all')}
+            >
+              All Projects
+            </button>
+            <button 
+              className="button" 
+              style={{ 
+                backgroundColor: '#1e293b', 
+                color: '#60a5fa',
+                border: '1px solid #334155'
+              }}
+              onClick={() => setActiveFilter('University')}
+            >
+              University Projects
+            </button>
+            <button 
+              className="button" 
+              style={{ 
+                backgroundColor: '#1e293b', 
+                color: '#60a5fa',
+                border: '1px solid #334155'
+              }}
+              onClick={() => setActiveFilter('Freelance')}
+            >
+              Freelancing Projects
+            </button>
+            <button 
+              className="button" 
+              style={{ 
+                backgroundColor: '#1e293b', 
+                color: '#60a5fa',
+                border: '1px solid #334155'
+              }}
+              onClick={() => setActiveFilter('Personal')}
+            >
+              Personal Projects
+            </button>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="projects-grid">
+            {projects
+              .filter(project => activeFilter === 'all' || project.type === activeFilter)
+              .map((project, index) => (
+                <div key={index} className="project-card">
+                  <div className="project-header">
+                    <h3 style={{ color: '#60a5fa', marginBottom: 8 }}>{project.title}</h3>
+                    <span className="project-type" style={{ 
+                      backgroundColor: project.type === 'University' ? '#7c3aed' : 
+                                     project.type === 'Freelance' ? '#059669' : '#dc2626',
+                      color: 'white',
+                      padding: '4px 8px',
+                      borderRadius: '4px',
+                      fontSize: '0.75rem',
+                      fontWeight: '500'
+                    }}>
+                      {project.type}
+                    </span>
+                  </div>
+                  <p style={{ color: '#cbd5e1', marginBottom: 16, lineHeight: '1.6' }}>
+                    {project.desc}
+                  </p>
+                  <div className="project-tags" style={{ marginBottom: 16 }}>
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="chip" style={{ marginRight: 8, marginBottom: 4 }}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="project-links" style={{ display: 'flex', gap: 12 }}>
+                    <a 
+                      href={project.github} 
+                      className="button" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{ 
+                        backgroundColor: '#1e293b', 
+                        color: '#60a5fa',
+                        border: '1px solid #334155',
+                        padding: '8px 16px',
+                        fontSize: '0.875rem'
+                      }}
+                    >
+                      GitHub
+                    </a>
+                    {project.demo !== '#' && (
+                      <a 
+                        href={project.demo} 
+                        className="button" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style={{ 
+                          backgroundColor: '#3b82f6', 
+                          color: 'white',
+                          padding: '8px 16px',
+                          fontSize: '0.875rem'
+                        }}
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
 
