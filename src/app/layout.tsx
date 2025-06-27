@@ -16,7 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Header */}
         <header className="header-glass">
           <div className="header-content">
-            <span className="header-logo">Oshadha Dahanayaka</span>
+            <span className="header-logo" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <img src="/logo.png" alt="Oshadha Dahanayaka Logo" style={{ height: 40, width: 40, objectFit: 'contain', marginRight: 8 }} />
+              Oshadha Dahanayaka
+            </span>
             <nav className="header-nav">
               <a href="#" className="header-link">Home</a>
               <a href="#about" className="header-link">About</a>
