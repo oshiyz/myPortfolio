@@ -106,7 +106,7 @@ export default function Home() {
             </p>
             <div className="hero-buttons">
               <a href="/Oshadha Dahanayaka.pdf" download className="button">Download CV</a>
-              <button className="button">View Projects</button>
+              <a href="#projects" className="button">View Projects</a>
             </div>
           </div>
         </div>
