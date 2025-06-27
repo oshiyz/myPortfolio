@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 const stats = [
   { label: 'Years Experience', value: '3+' },
-  { label: 'Projects', value: '5+' },
-  { label: 'Technologies', value: '10+' },
+  { label: 'Projects', value: '4+' },
+  { label: 'Technologies', value: '8+' },
 ];
 
 const timeline = [
@@ -31,14 +31,6 @@ const projects = [
     tags: ['Angular', '.NET', 'MSSQL', 'TypeScript', 'C#'], 
     type: 'University',
     github: 'https://github.com/oshiyz/Tourism_Galle',
-    demo: '#'
-  },
-  { 
-    title: 'Student Management System', 
-    desc: 'Comprehensive student management solution with attendance tracking, grade management, and reporting features.', 
-    tags: ['Java', 'MySQL', 'Swing', 'JDBC'], 
-    type: 'University',
-    github: 'https://github.com/oshiyz/student-management',
     demo: '#'
   },
   
@@ -113,7 +105,7 @@ export default function Home() {
               I transform complex ideas into elegant, scalable solutions that drive business success.
             </p>
             <div className="hero-buttons">
-              <button className="button">Download CV</button>
+              <a href="/Oshadha Dahanayaka.pdf" download className="button">Download CV</a>
               <button className="button">View Projects</button>
             </div>
           </div>
@@ -122,13 +114,24 @@ export default function Home() {
         {/* About/Intro Card */}
         <div className="card" id="about">
           <h2 className="section-title">About Me</h2>
-          <p style={{ color: '#e0e7ef', marginBottom: 16 }}>
-            I specialize in full-stack web development, UI/UX, and digital solutions. My journey is driven by curiosity and a passion for technology.
+          <p style={{ color: '#e0e7ef', marginBottom: 16, lineHeight: '1.7' }}>
+            I'm a passionate full-stack web developer with a strong foundation in modern web technologies. Currently pursuing my BSc in IT at SLIIT, I specialize in creating elegant, scalable solutions that drive business success.
+          </p>
+          <p style={{ color: '#e0e7ef', marginBottom: 16, lineHeight: '1.7' }}>
+            My journey in web development began with building responsive websites and has evolved into developing complex full-stack applications. I've worked on various projects including Learning Management Systems, Tourism platforms, and E-commerce solutions. My 7-month internship at Scienter Technologies provided me with real-world experience in enterprise-level development.
+          </p>
+          <p style={{ color: '#e0e7ef', marginBottom: 16, lineHeight: '1.7' }}>
+            I'm proficient in both frontend and backend technologies, with expertise in React, Angular, Node.js, Spring Boot, and various databases. I enjoy solving complex problems and continuously learning new technologies to stay current with industry trends.
+          </p>
+          <p style={{ color: '#e0e7ef', marginBottom: 20, lineHeight: '1.7' }}>
+            When I'm not coding, I contribute to open-source projects and share my knowledge with the developer community. I'm always excited to take on new challenges and collaborate on innovative projects.
           </p>
           <div>
-            <span className="chip">Full Stack</span>
-            <span className="chip">UI/UX</span>
+            <span className="chip">Full Stack Development</span>
+            <span className="chip">UI/UX Design</span>
             <span className="chip">Problem Solver</span>
+            <span className="chip">Team Player</span>
+            <span className="chip">Continuous Learner</span>
           </div>
         </div>
 
@@ -283,9 +286,26 @@ export default function Home() {
           <p style={{ color: '#cbd5e1', marginBottom: 16 }}>
             I'm always open to discussing new projects, collaborations, or just having a chat!
           </p>
-          <a href="mailto:oshadhadahanayaka0504@gmail.com" className="button">Email</a>
-          <a href="https://github.com/oshiyz" className="button" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/oshadha-dahanayaka-47310b2b4/" className="button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <div className="connect-buttons" style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="mailto:oshadhadahanayaka0504@gmail.com" className="button" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              Email
+            </a>
+            <a href="https://github.com/oshiyz" className="button" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/oshadha-dahanayaka-47310b2b4/" className="button" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
         </div>
 
         {/* Footer */}
@@ -312,25 +332,28 @@ export default function Home() {
             <div className="footer-section">
               <h3>Connect</h3>
               <div className="footer-links">
-                <a href="mailto:your.email@example.com" className="footer-link">Email</a>
-                <a href="https://linkedin.com/in/yourprofile" className="footer-link">LinkedIn</a>
-                <a href="https://github.com/yourusername" className="footer-link">GitHub</a>
+                <a href="mailto:oshadhadahanayaka0504@gmail.com" className="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/oshadha-dahanayaka-47310b2b4/" className="footer-link">LinkedIn</a>
+                <a href="https://github.com/oshiyz" className="footer-link">GitHub</a>
               </div>
             </div>
           </div>
 
           <div className="footer-social">
-            <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn">
-              <i className="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/oshadha-dahanayaka-47310b2b4/" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
             </a>
-            <a href="https://github.com/yourusername" aria-label="GitHub">
-              <i className="fab fa-github"></i>
+            <a href="https://github.com/oshiyz" aria-label="GitHub">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
             </a>
-            <a href="https://twitter.com/yourusername" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/yourusername" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
+            <a href="mailto:oshadhadahanayaka0504@gmail.com" aria-label="Email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
             </a>
           </div>
 
