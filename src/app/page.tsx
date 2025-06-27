@@ -22,7 +22,7 @@ const projects = [
     desc: 'Full-stack Learning Management System with SpringBoot, React, MongoDB. Features include user authentication, course management, and progress tracking.', 
     tags: ['SpringBoot', 'React', 'MongoDB', 'JWT', 'REST API'], 
     type: 'University',
-    github: 'https://github.com/oshiyz/learn-ora',
+    github: 'https://github.com/oshiyz/LearnOra',
     demo: '#'
   },
   { 
@@ -30,7 +30,7 @@ const projects = [
     desc: 'Tourism web application built with Angular frontend and .NET backend. Includes location-based services and booking system.', 
     tags: ['Angular', '.NET', 'MSSQL', 'TypeScript', 'C#'], 
     type: 'University',
-    github: 'https://github.com/oshiyz/discover-galle',
+    github: 'https://github.com/oshiyz/Tourism_Galle',
     demo: '#'
   },
   { 
