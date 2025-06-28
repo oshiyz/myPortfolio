@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./styles.css";
+import React from "react";
+import Header from "../components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,21 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Header */}
-        <header className="header-glass">
-          <div className="header-content">
-            <span className="header-logo" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <img src="/logo.png" alt="Oshadha Dahanayaka Logo" style={{ height: 40, width: 40, objectFit: 'contain', marginRight: 8 }} />
-              Oshadha Dahanayaka
-            </span>
-            <nav className="header-nav">
-              <a href="#" className="header-link">Home</a>
-              <a href="#about" className="header-link">About</a>
-              <a href="#projects" className="header-link">Projects</a>
-              <a href="#contact" className="header-link">Contact</a>
-            </nav>
-          </div>
-        </header>
+        <Header />
         <div style={{ paddingTop: 72 }}>{children}</div>
         {/* Footer is handled in page.tsx for now */}
       </body>
