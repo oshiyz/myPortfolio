@@ -18,7 +18,23 @@ const timeline = [
 const projects = [
   // University Projects
   { 
-    title: 'Learn OAR', 
+    title: 'Online Pet Management System', 
+    desc: 'A comprehensive web-based system for managing pet care services, including pet registration, appointment scheduling, veterinary records, and customer management. Features user authentication, admin dashboard, and responsive design.', 
+    tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'JWT', 'REST API'], 
+    type: 'University',
+    github: 'https://github.com/oshiyz/Online-Pet-Management-System',
+    demo: '#'
+  },
+  { 
+    title: 'Boat Safari Management System', 
+    desc: 'A tourism management system for boat safari operations, including booking management, customer registration, tour scheduling, and payment processing. Features real-time availability tracking and reporting.', 
+    tags: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'], 
+    type: 'University',
+    github: '#',
+    demo: '#'
+  },
+  { 
+    title: 'Learn Ora', 
     desc: 'Full-stack Learning Management System with SpringBoot, React, MongoDB. Features include user authentication, course management, and progress tracking.', 
     tags: ['SpringBoot', 'React', 'MongoDB', 'JWT', 'REST API'], 
     type: 'University',
@@ -36,7 +52,7 @@ const projects = [
   
   // Freelancing Projects
   { 
-    title: 'Dreamn Bride', 
+    title: 'Dream Bride', 
     desc: 'Wedding planning and bridal services platform with vendor management, booking system, and portfolio showcase.', 
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'], 
     type: 'Freelance',
