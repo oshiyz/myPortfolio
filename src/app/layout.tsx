@@ -86,7 +86,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         {/* Google Search Console Verification */}
-<meta name="google-site-verification" content="pRlF2nH15lMVOeJN2hT-2KznZAK-79Z7OiIAbNmIq0U" />        
+        <meta name="google-site-verification" content="pRlF2nH15lMVOeJN2hT-2KznZAK-79Z7OiIAbNmIq0U" />
+        
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GA_MEASUREMENT_ID');
+            `,
+          }}
+        />
+        
         {/* Structured Data for Person */}
         <script
           type="application/ld+json"

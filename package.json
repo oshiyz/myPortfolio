@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-og": "node scripts/generate-og-image.js"
+    "generate-og": "node scripts/generate-og-image.js",
+    "check-indexing": "node scripts/check-indexing.js"
   },
   "dependencies": {
     "canvas": "^3.1.2",
