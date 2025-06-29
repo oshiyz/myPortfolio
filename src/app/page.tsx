@@ -103,41 +103,45 @@ export default function Home() {
       )}
       <main className="main-container" style={{ filter: loading ? 'blur(8px)' : 'none', pointerEvents: loading ? 'none' : 'auto' }}>
         {/* Video Hero Section */}
-        <div className="hero-container">
+        <section className="hero-container" aria-label="Hero Section">
           <video
             autoPlay
             muted
             loop
             playsInline
             className="hero-video"
+            aria-hidden="true"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
           <div className="hero-content">
             <h1 style={{ fontSize: '3.2rem', fontWeight: 800, marginBottom: 16, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-              Hi, I'm <span style={{ color: '#3b82f6' }}>Oshadha</span>
+              Hi, I'm <span style={{ color: '#3b82f6' }}>Oshadha Dahanayaka</span>
             </h1>
-            <p style={{ fontSize: '1.5rem', color: '#fff', marginBottom: 32, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+            <p style={{ fontSize: '1.5rem', color: '#fff', marginBottom: 16, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+              Full Stack Developer & IT Student at SLIIT
+            </p>
+            <p style={{ fontSize: '1.2rem', color: '#cbd5e1', marginBottom: 32, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
               I transform complex ideas into elegant, scalable solutions that drive business success.
             </p>
             <div className="hero-buttons">
-              <a href="/Oshadha Dahanayaka.pdf" download className="button">Download CV</a>
-              <a href="#projects" className="button">View Projects</a>
+              <a href="/Oshadha Dahanayaka.pdf" download className="button" aria-label="Download Oshadha Dahanayaka's CV">Download CV</a>
+              <a href="#projects" className="button" aria-label="View Oshadha Dahanayaka's projects">View Projects</a>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* About/Intro Card */}
-        <div className="card" id="about">
-          <h2 className="section-title">About Me</h2>
+        <section className="card" id="about" aria-label="About Oshadha Dahanayaka">
+          <h2 className="section-title">About Oshadha Dahanayaka</h2>
           <p style={{ color: '#e0e7ef', marginBottom: 16, lineHeight: '1.7' }}>
-            I'm a passionate full-stack web developer with a strong foundation in modern web technologies. Currently pursuing my BSc in IT at SLIIT, I specialize in creating elegant, scalable solutions that drive business success.
+            I'm <strong>Oshadha Dahanayaka</strong>, a passionate full-stack web developer with a strong foundation in modern web technologies. Currently pursuing my BSc in IT at <strong>Sri Lanka Institute of Information Technology (SLIIT)</strong>, I specialize in creating elegant, scalable solutions that drive business success.
           </p>
           <p style={{ color: '#e0e7ef', marginBottom: 16, lineHeight: '1.7' }}>
-            My journey in web development began with building responsive websites and has evolved into developing complex full-stack applications. I've worked on various projects including Learning Management Systems, Tourism platforms, and E-commerce solutions. My 7-month internship at Scienter Technologies provided me with real-world experience in enterprise-level development.
+            My journey in web development began with building responsive websites and has evolved into developing complex full-stack applications. I've worked on various projects including <strong>Learning Management Systems</strong>, <strong>Tourism platforms</strong>, and <strong>E-commerce solutions</strong>. My 7-month internship at <strong>Scienter Technologies</strong> provided me with real-world experience in enterprise-level development.
           </p>
           <p style={{ color: '#e0e7ef', marginBottom: 16, lineHeight: '1.7' }}>
-            I'm proficient in both frontend and backend technologies, with expertise in React, Angular, Node.js, Spring Boot, and various databases. I enjoy solving complex problems and continuously learning new technologies to stay current with industry trends.
+            I'm proficient in both frontend and backend technologies, with expertise in <strong>React</strong>, <strong>Angular</strong>, <strong>Node.js</strong>, <strong>Spring Boot</strong>, and various databases including <strong>MongoDB</strong> and <strong>MySQL</strong>. I enjoy solving complex problems and continuously learning new technologies to stay current with industry trends.
           </p>
           <p style={{ color: '#e0e7ef', marginBottom: 20, lineHeight: '1.7' }}>
             When I'm not coding, I contribute to open-source projects and share my knowledge with the developer community. I'm always excited to take on new challenges and collaborate on innovative projects.
@@ -149,7 +153,7 @@ export default function Home() {
             <span className="chip">Team Player</span>
             <span className="chip">Continuous Learner</span>
           </div>
-        </div>
+        </section>
 
         {/* Career Timeline & Stats */}
         <div className="card">
