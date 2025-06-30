@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "generate-og": "node scripts/generate-og-image.js",
-    "check-indexing": "node scripts/check-indexing.js"
+    "check-indexing": "node scripts/check-indexing.js",
+    "check-status": "node scripts/check-site-status.js"
   },
   "dependencies": {
     "canvas": "^3.1.2",
